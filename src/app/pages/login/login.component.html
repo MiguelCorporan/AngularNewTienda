@@ -1,0 +1,31 @@
+<section>
+
+    <h2>Inicia seccion</h2>
+
+    <form class="material-form" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <h4>Iniciar</h4>
+        <div class="material-form__container">
+            <input class="material-form__input" type="email" placeholder=" " id="input-email" maxlength="50"
+                formControlName="email" />
+            <label class="material-form__label" for="input-email">Correo electrónico</label>
+            <div class="material-form__focus-animation"></div>
+            <p class="material-form__error">Correo electrónico no válido</p>
+        </div>
+        <div class="material-form__container">
+            <input class="material-form__input" type="password" placeholder=" " id="input-password" maxlength="18"
+                formControlName="pass" />
+            <label class="material-form__label" for="input-password">Contraseña</label>
+            <div class="material-form__focus-animation"></div>
+            <p class="material-form__error">Contraseña no válido</p>
+        </div>
+        <div class="date">
+            <p>Olvide mi contrasena</p>
+            <p routerLink="/registro">No tengo una cuenta</p>
+        </div>
+        <button class="material-form__button">Crear cuenta</button>
+        <h5 *ngIf="change">Parece que no tienes una cuenta</h5>
+    </form>
+    <div>
+        <img src="" alt="">
+    </div>
+</section>

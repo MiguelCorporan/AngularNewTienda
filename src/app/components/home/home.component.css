@@ -1,0 +1,28 @@
+h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+
+    /* font-family: 'Oxygen', sans-serif; */
+    font-family: 'Solway', serif;
+    color: #019fe4;
+}
+
+main {
+    height: 100vh;
+
+}
+
+@media screen and (min-width: 780px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 5rem;
+        margin-bottom: 5rem;
+    }
+}

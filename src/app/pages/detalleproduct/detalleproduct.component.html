@@ -1,0 +1,18 @@
+<div class="medio" *ngIf="view; else myTemplate">
+    <app-loader></app-loader>
+</div>
+
+<ng-template #myTemplate>
+
+    <h2>-{{Datos.title}}-</h2>
+    <!-- <article> -->
+    <div class="conten">
+        <article>
+            <div class="card" (click)="addToCart(Datos, $event)"><img src="/assets/carrito.png" alt=""></div>
+            <img class="ima" src={{Datos.image}} alt="">
+            <h4 class="title">{{Datos.title}}</h4>
+            <div class="price">{{Datos.price | currency:'USD'}}</div>
+        </article>
+    </div>
+    <!-- </article> -->
+</ng-template>

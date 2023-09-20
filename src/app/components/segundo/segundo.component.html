@@ -1,0 +1,18 @@
+<app-loader *ngIf="change; else myTemplate"></app-loader>
+
+<ng-template #myTemplate>
+    <section>
+
+        <h3>- Productos -</h3>
+
+
+        <div class="conten">
+            <article *ngFor="let Data of Datos">
+                <div class="card" (click)="addToCart(Data)"><img src="/assets/carrito.png" alt=""></div>
+                <img class="ima" src={{Data.image}} alt="" (click)="Detalle(Data,$event)">
+                <h4 class="title">{{Data.title}}</h4>
+                <div class="price">{{Data.price | currency:'USD'}}</div>
+            </article>
+        </div>
+    </section>
+</ng-template>

@@ -1,0 +1,15 @@
+.carrito {
+    width: 18rem;
+    height: 4rem;
+    background-color: #ededed;
+    color: #019fe4;
+    font-weight: 700;
+    right: 0;
+    top: 80%;
+    z-index: 999999999999;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,17 @@
+<section>
+    <h2>- Productos mas vendidos -</h2>
+    <div class="divisor">
+        <img class="imgg" src="/assets/Mes.svg" alt="">
+        <div class="gallery-container">
+            <div *ngFor="let ima of imgs" class="gallery-item">
+                <img class="galley_img" src={{ima.image}} (click)="Detalles(ima, $event)" alt="">
+                <div class="datos">
+                    <h3 class="gallery_title">{{ima.title}}</h3>
+                    <img src="/assets/carrito.png" (click)="addToCard(ima, $event)" alt="">
+                </div>
+            </div>
+            <!-- -->
+
+        </div>
+    </div>
+</section>

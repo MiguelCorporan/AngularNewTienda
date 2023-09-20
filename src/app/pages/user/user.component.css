@@ -1,0 +1,26 @@
+.medio {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.salir {
+    margin-top: 2rem;
+    background-color: #019fe4;
+    padding: .5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.salir:hover {
+    color: rgb(139, 139, 139);
+}

@@ -1,0 +1,23 @@
+<app-loader *ngIf="change; else myTemplate"></app-loader>
+
+
+<ng-template #myTemplate>
+
+    <div class="sele">
+        <select (change)="Seleccion()" [(ngModel)]="selectedValue">
+            <option disabled selected value="">Selecciona una categoría</option>
+            <option value="Todas las categorias">Todas las categorias</option>
+            <option *ngFor="let Cate of Categorias" [value]="Cate">{{Cate}}</option>
+        </select>
+    </div>
+    <section class="articulos">
+        <article *ngFor="let Data of FiltroDatos">
+            <div class="card" (click)="addToCart(Data)"><img src="/assets/carrito.png" alt=""></div>
+            <img class="ima" src={{Data.image}} alt="" (click)="Detalle(Data,$event)">
+            <h4 class="title">{{Data.title}}</h4>
+            <div class="price">{{Data.price | currency:'USD'}}</div>
+        </article>
+
+    </section>
+
+</ng-template>

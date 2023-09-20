@@ -1,0 +1,71 @@
+.sele {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.articulos {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 0.5rem;
+}
+
+article {
+    position: relative;
+    scroll-snap-align: start;
+    border-radius: 20px;
+    height: 22rem;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: -1px -1px 29px -10px #000000f5;
+    -webkit-box-shadow: -1px -1px 29px -10px rgba(0, 0, 0, .96);
+    -moz-box-shadow: -1px -1px 29px -10px rgba(0, 0, 0, .96);
+    padding: 10px;
+}
+
+article h4 {
+    width: 90%;
+    text-align: center;
+    font-size: .8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
+.card img {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.ima {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.price {
+    width: 40%;
+    background-color: black;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}

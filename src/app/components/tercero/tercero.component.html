@@ -1,0 +1,12 @@
+<section>
+
+    <h2>- Productos en ofertas -</h2>
+
+    <div class="expanded">
+        <article class="art">
+            <img *ngFor="let ima of Date" src={{ima.image}} (click)="Redirect(ima, $event)" alt="">
+        </article>
+        <img class="black-man" src="/assets/oferta.svg" alt="">
+    </div>
+
+</section>

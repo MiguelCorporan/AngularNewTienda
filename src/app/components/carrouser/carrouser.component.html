@@ -1,0 +1,14 @@
+<app-loader *ngIf="change; else myTemplate"></app-loader>
+
+<ng-template #myTemplate>
+    <div *ngIf="images && images.length > 0" class="carrousel-container">
+        <img *ngFor="let image of images; let i = index" [src]="image.image" [alt]="image.imageAlt"
+            [ngClass]="{'image-active': selectIndex === i}" class="'fade">
+
+        <div *ngIf="Indicador" class="bolitas" class="carrousel-dot-container">
+
+            <span *ngFor="let dot of images; let i = index" class="dot" [ngClass]="{'active': selectIndex === i}"
+                (click)="selectImge(i)"></span>
+        </div>
+    </div>
+</ng-template>

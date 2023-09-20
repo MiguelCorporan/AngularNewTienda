@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Oxygen', sans-serif;
+
+    background-color: #111111;
+}
+
+html {
+    overflow-x: hidden;
+}

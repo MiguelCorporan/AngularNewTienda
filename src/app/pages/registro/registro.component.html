@@ -1,0 +1,31 @@
+<h3>Registrate Ahora</h3>
+
+<form (ngSubmit)="onSubmit()" class="material-form" [formGroup]="contactForm">
+    <h4>Registrate</h4>
+    <div class="material-form__container">
+        <input class="material-form__input" type="text" placeholder=" " id="input-name" maxlength="20"
+            formControlName="name" />
+        <label class="material-form__label" for="input-name">Nombre y apellido</label>
+        <div class="material-form__focus-animation"></div>
+        <p class="material-form__error">Nombre no válido</p>
+    </div>
+    <div class="material-form__container">
+        <input class="material-form__input" type="email" placeholder=" " id="input-email" maxlength="20"
+            formControlName="email" />
+        <label class="material-form__label" for="input-email">Correo electrónico</label>
+        <div class="material-form__focus-animation"></div>
+        <p class="material-form__error">Correo electrónico no válido</p>
+    </div>
+    <div class="material-form__container">
+        <input class="material-form__input" type="password" placeholder=" " id="input-password" maxlength="15"
+            formControlName="pass" />
+        <label class="material-form__label" for="input-password">Contraseña</label>
+        <div class="material-form__focus-animation"></div>
+        <p class="material-form__error">Contraseña no válido</p>
+    </div>
+    <button class="material-form__button">Crear cuenta</button>
+</form>
+
+
+<!-- <p *ngIf="NiceRegistro">Usted se ah registrado exitosamente</p> -->
+<p *ngIf="NiceRegistro">Usted se ah registrado exitosamente</p>

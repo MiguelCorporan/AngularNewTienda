@@ -1,0 +1,35 @@
+<header>
+    <div class="divisor">
+        <li *ngIf="!loged; else myTemplate"><a routerLink="login" routerLinkActive="active">Login</a></li>
+        <h3 routerLink="/">Tienda</h3>
+        <div></div>
+    </div>
+
+    <nav>
+        <li> <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a></li>
+        <li><a routerLink="store" routerLinkActive="active">Productos</a></li>
+        <li (click)="cambio()"><span>{{numer}}</span> Carrito</li>
+    </nav>
+</header>
+
+<ng-template #myTemplate>
+    <li routerLink="/user" class="namae">{{name}}</li>
+</ng-template>
+
+<div class="card" [ngClass]="{'seve': change}">
+    <div class="inter">
+        <div class="tarjeta" *ngFor="let item of items">
+            <img class="imap" src={{item.image}} alt="">
+            <div class="med">
+                <h4 class="title">{{item.title}}</h4>
+                <p class="price">Precio:{{item.price | currency: 'USD'}}</p>
+                <p>Cantidad: {{item.count}}</p>
+            </div>
+            <img class="bas" src="assets/basura.png" alt="" (click)="remove(item, $event)">
+        </div>
+    </div>
+    <div class="ban">
+        <h3>Total: {{price | currency: 'USD'}}</h3>
+        <p (click)="allRemove()">Eliminar todo</p>
+    </div>
+</div>
